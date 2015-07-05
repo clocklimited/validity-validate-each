@@ -1,1 +1,33 @@
-# validity-validate-each
+## validity-validate-each
+
+Validate each value of an array..
+
+## Installation
+
+```
+npm install validity-validate-each --save
+```
+
+## Usage
+
+Below is a simple example for usage with schemata and save:
+
+``` js
+var validity = require('validity')
+  , schemata = require('schemata')
+  , save = require('save')
+  , collection = save('author')
+  , validateEach = require('validity-validate-each')
+
+var schema = schemata(
+    { emailAddresses:
+      { type: Array
+      , validators:
+        { all:
+          [ validteEach(validity.required)
+          , validateEach(validity.email)
+          ] }
+      }
+    })
+
+```
