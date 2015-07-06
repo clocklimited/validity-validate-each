@@ -24,7 +24,7 @@ var schema = schemata(
       { type: Array
       , validators:
         { all:
-          [ validteEach(validity.required)
+          [ validateEach(validity.required)
           , validateEach(validity.email)
           ] }
       }
