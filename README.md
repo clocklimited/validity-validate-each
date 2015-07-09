@@ -1,6 +1,6 @@
 ## validity-validate-each
 
-Validate each value of an array..
+Validate each value of an array.
 
 ## Installation
 
@@ -26,7 +26,8 @@ var schema = schemata(
         { all:
           [ validateEach(validity.required)
           , validateEach(validity.email)
-          ] }
+          ]
+        }
       }
     })
 
