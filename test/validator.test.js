@@ -1,6 +1,6 @@
 var assert = require('assert-diff')
   , required = require('validity').required
-  , createValidator = require('../validator')
+  , createValidator = require('..')
 
 describe('Validity Validate Each', function () {
 
