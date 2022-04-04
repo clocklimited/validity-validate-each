@@ -1,6 +1,6 @@
 {
   "name": "@clocklimited/validity-validate-each",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validate all entries of an array.",
   "main": "validator.js",
   "scripts": {
