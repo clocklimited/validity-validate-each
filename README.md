@@ -12,23 +12,19 @@ npm install validity-validate-each --save
 
 Below is a simple example for usage with schemata and save:
 
-``` js
-var validity = require('validity')
-  , schemata = require('schemata')
-  , save = require('save')
-  , collection = save('author')
-  , validateEach = require('validity-validate-each')
+```js
+var validity = require("@clocklimited/validity"),
+  schemata = require("schemata"),
+  save = require("save"),
+  collection = save("author"),
+  validateEach = require("@clocklimited/validity-validate-each");
 
-var schema = schemata(
-    { emailAddresses:
-      { type: Array
-      , validators:
-        { all:
-          [ validateEach(validity.required)
-          , validateEach(validity.email)
-          ]
-        }
-      }
-    })
-
+var schema = schemata({
+  emailAddresses: {
+    type: Array,
+    validators: {
+      all: [validateEach(validity.required), validateEach(validity.email)],
+    },
+  },
+});
 ```
